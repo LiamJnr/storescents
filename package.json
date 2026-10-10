@@ -1,0 +1,15 @@
+{
+  "name": "store-scents",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Store Scents (NOVEAU) - Luxury Perfume E-commerce Storefront",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/dev-server.mjs --dist"
+  },
+  "keywords": ["perfume", "fragrance", "ecommerce", "vanilla-js", "ghana"],
+  "author": "",
+  "license": "UNLICENSED"
+}

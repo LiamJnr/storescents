@@ -1,0 +1,10 @@
+name = "store-scents"
+compatibility_date = "2026-09-06"
+pages_build_output_dir = "./dist"
+
+# D1 Database binding will be linked during backend deployment
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "store-scents-production"
+# database_id = "PRODUCTION_DATABASE_ID"
+# preview_database_id = "PREVIEW_DATABASE_ID"
