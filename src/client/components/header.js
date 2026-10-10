@@ -68,6 +68,21 @@ export function renderHeader() {
  * Setup header event handlers and store listeners
  */
 export function initHeader() {
+  const header = document.getElementById("site-header");
+  if (header) {
+    const updateHeaderHeight = () => {
+      const height = Math.round(header.getBoundingClientRect().height);
+      if (height > 0) {
+        document.documentElement.style.setProperty("--header-height", `${height}px`);
+      }
+    };
+    if (typeof ResizeObserver !== "undefined") {
+      new ResizeObserver(updateHeaderHeight).observe(header);
+    }
+    window.addEventListener("resize", updateHeaderHeight, { passive: true });
+    updateHeaderHeight();
+  }
+
   const menuBtn = document.getElementById("btn-toggle-menu");
   const searchBtn = document.getElementById("btn-toggle-search");
   const cartBtn = document.getElementById("btn-toggle-cart");

@@ -261,6 +261,55 @@
   }
 }
 
+/* PDP Related Products */
+.pdp-related-section {
+  margin-top: var(--space-4xl);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3xl);
+}
+
+.pdp-related-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: var(--space-xl);
+}
+
+.product-scroll-strip {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: var(--space-sm);
+}
+
+.product-scroll-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, clamp(148px, 15vw, 210px));
+  grid-template-rows: auto auto auto;
+  gap: var(--space-xl) var(--space-md);
+  width: max-content;
+  justify-content: start;
+}
+
+.related-products-grid > .product-card {
+  scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  .related-products-grid {
+    gap: var(--space-md);
+  }
+}
+
 /* ==========================================================================
    Checkout View
    ========================================================================== */

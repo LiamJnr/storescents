@@ -15,7 +15,7 @@ function bootstrap() {
   if (!appRoot) return;
 
   appRoot.innerHTML = `
-    <div id="site-header-root">${renderHeader()}</div>
+    ${renderHeader()}
     <main id="app-main"></main>
     <div id="site-footer-root">${renderFooter()}</div>
     

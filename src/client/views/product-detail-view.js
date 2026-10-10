@@ -148,10 +148,12 @@ export function renderProductDetailView({ params = {} } = {}) {
 
         <!-- Related Fragrances -->
         ${relatedProducts.length > 0 ? `
-          <div style="margin-top: var(--space-4xl); border-top: 1px solid var(--color-border); padding-top: var(--space-3xl);">
-            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: var(--space-xl);">You May Also Admire</h3>
-            <div class="product-grid" style="grid-template-columns: repeat(4, 1fr);">
-              ${relatedProducts.map(p => renderProductCard(p, { showAddToCart: true, showCategoryTag: false })).join("")}
+          <div class="pdp-related-section">
+            <h3 class="pdp-related-title">You May Also Admire</h3>
+            <div class="product-scroll-strip">
+              <div class="product-grid related-products-grid">
+                ${relatedProducts.map(p => renderProductCard(p, { showAddToCart: true, showCategoryTag: false })).join("")}
+              </div>
             </div>
           </div>
         ` : ''}
